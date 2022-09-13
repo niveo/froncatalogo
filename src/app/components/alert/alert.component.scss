@@ -1,0 +1,45 @@
+.alert-error {
+    background-color: #fff2f0;;
+    border: 1px solid #ffccc7;
+}
+
+.alert-info {
+    background-color: #e6f7ff;
+    border: 1px solid #91d5ff;
+}
+
+.alert-success {
+    background-color: #f6ffed;
+    border: 1px solid #b7eb8f;
+}
+
+.alert-warning {
+    background-color:#fffbe6;
+    border: 1px solid #ffe58f;
+}
+
+.alert {
+    box-sizing: border-box;
+    margin: 0;
+    color: #000000d9;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: "tnum","tnum";
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    word-wrap: break-word;
+    border-radius: 2px;
+}
+
+.alert-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.alert-message {
+    color: #000000d9;
+}

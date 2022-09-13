@@ -1,0 +1,15 @@
+<div fxLayout="column" fxLayoutGap="5px">
+    <span style="color: red;">
+        Essa operação vai excluir todas as paginas desse catalogo.
+    </span>
+    <upload-component (onEventFileSelected)="onEventFileSelected($event)" requiredFileType=".pdf"></upload-component>
+    <mat-form-field appearance="fill">
+        <mat-label>DPI (Qualidade)</mat-label>
+        <input matInput type="number" [(ngModel)]="dpi">
+    </mat-form-field>
+    <div fxLayout="row" fxLayoutGap="5px">
+        <button fxFlex mat-raised-button color="primary" (click)="onImportarCatalog()" [disabled]="!file">Importar <mat-icon>publish</mat-icon></button>
+        <button   mat-button color="primary" (click)="dialogRef.close()">Sair <mat-icon>close</mat-icon></button>
+    </div>
+    <mat-progress-bar mode="indeterminate" *ngIf="progress"></mat-progress-bar>
+</div>

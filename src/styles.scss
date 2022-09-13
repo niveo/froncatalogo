@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+body {
+    background: #fafafa;
+    font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #333;
+    font-weight: 300;
+    margin: 0;
+    padding: 1px;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+
+.full-height-h {
+    overflow: hidden !important;
+    height: 100% !important;
+}
+
+.full-height-a {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%
+}
+
+.mat-drawer-container,
+.mat-tab-body-wrapper {
+    height: 100%
+}
+
+
+.snackbar-error {
+    color: red;
+    background: white;
+}
+
+.snackbar-info {
+    color: blue;
+    background: white;
+}
+
+.snackbar-warning {
+    color: goldenrod;
+    background: white;
+}

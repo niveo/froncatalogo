@@ -1,0 +1,50 @@
+<div fxLayout="column" class="full-height-h">
+    <mat-toolbar >
+        <button mat-icon-button (click)="goBack()">
+            <mat-icon>keyboard_return</mat-icon>
+        </button>
+        <div fxFlex></div>
+        <button mat-button (click)="incluirCordenadas()">
+            <mat-icon>add</mat-icon> Incluir (ctr+alt+i)
+        </button>
+        <button mat-button color="primary" (click)="lancarCordenadas()">
+            <mat-icon>search</mat-icon> Definir Produto (ctr+alt+p)
+        </button>
+
+        <button mat-icon-button (click)="produtosMapeados()" 
+            matTooltip="Produtos Mapeados"
+            [matBadge]="contaMapeados">
+            <mat-icon>list</mat-icon>
+        </button> 
+ 
+        <button mat-icon-button (click)="angularCropper.cropper.clear()" matTooltip="Limpar">
+            <mat-icon>clear</mat-icon>
+        </button>
+
+        <button mat-icon-button (click)="zoomIn()" matTooltip="Zoom">
+            <mat-icon>zoom_in</mat-icon>
+        </button>
+
+        <button mat-icon-button (click)="zoomOut()" matTooltip="Zoom">
+            <mat-icon>zoom_out</mat-icon>
+        </button>
+
+        <button mat-icon-button (click)="setDragModeMove()" matTooltip="mover">
+            <mat-icon>open_with</mat-icon>
+        </button>
+
+        <button mat-icon-button (click)="setDragModeCrop()" matTooltip="Cortar">
+            <mat-icon>crop</mat-icon>
+        </button>
+
+        <button mat-icon-button (click)="cropperReset()" matTooltip="Resetar">
+            <mat-icon>reply_all</mat-icon>
+        </button>
+        
+        <mat-checkbox [(ngModel)]="ativarFinalCrop" matTooltip="Definir Produto (Seleção Corte)">DP Corte</mat-checkbox>
+    </mat-toolbar>
+    <div fxFlex class="full-height-a">
+        <angular-cropper [cropperOptions]="configCropper" #angularCropper [imageUrl]="imageUrl">
+        </angular-cropper>
+    </div>
+</div>

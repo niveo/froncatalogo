@@ -2,8 +2,12 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  production: false
+import { IConfigToken } from "src/app/common/app-config";
+
+export const environment : IConfigToken = {
+  production: false,
+  root_http: 'http://localhost:8080',
+  urlCatalogos:  'http://localhost:8080/catalogos'
 };
 
 /*

@@ -1,0 +1,25 @@
+<div fxLayout="column">
+    <mat-form-field appearance="fill">
+        <mat-label>Pesquisa Produto</mat-label>
+        <input #materialInput matInput [(ngModel)]="referenciaProduto" (keydown.enter)="onPesquisaReferenciaProdutoKey( )">
+        <mat-icon matSuffix>search</mat-icon>
+        <mat-hint>{{produto?.descricao}}</mat-hint>
+    </mat-form-field>
+    <mat-progress-bar mode="indeterminate" *ngIf="progress"></mat-progress-bar>
+    <br />
+    <div fxLayout="row" fxLayoutGap="5px">
+        <div fxFlex fxLayout="column" fxLayoutGap="5px">
+            <button mat-raised-button (click)="onSalvarNovo()" [disabled]="!produto">
+                Salvar e Novo (ctrl+alt+e)
+            </button>
+            <button mat-raised-button (click)="onSalvarSair()" [disabled]="!produto">
+                Salvar e Sair (ctrl+alt+s)
+            </button>
+        </div>
+        <button mat-button (click)="onClose()"> Sair
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <br />
+    <span style="font-size: 10px;">{{data.cordenadas | json}}</span>
+</div>

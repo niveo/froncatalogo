@@ -1,4 +1,11 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+interface MenuRota {
+  descricao: string;
+  icone: string;
+  rota: string;
+}
 
 @Component({
   selector: 'app-root',
@@ -6,5 +13,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'froncatalogo';
+
+  constructor(private route: Router) { }
+
+  menuRotas: MenuRota[] = [{
+    descricao: 'Catalogos', icone: 'auto_stories', rota: 'catalogos'
+  }, {
+    descricao: 'Produtos', icone: 'shopping_cart', rota: 'produtos'
+  }];
+
+  navegar(rota: string) {
+    this.route.navigate(['/' + rota])
+  }
+
 }

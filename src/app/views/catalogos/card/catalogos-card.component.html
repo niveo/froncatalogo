@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-title-group>
+        <mat-card-title>{{registro?.descricao}}</mat-card-title>
+        <mat-card-subtitle>{{registro?.dataAlterado | dateptbr}}</mat-card-subtitle>
+        <img mat-card-xl-image [src]="registro?.imagemUrl">
+    </mat-card-title-group>
+    <mat-card-content>
+        <span [innerHTML]="registro?.observacao | sanitizeHtml"></span>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-icon-button (click)="onEditar()">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="onRemover()">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>

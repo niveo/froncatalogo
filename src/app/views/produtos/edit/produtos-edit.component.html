@@ -1,0 +1,36 @@
+<div fxLayout="column">
+    <mat-form-field appearance="fill">
+        <mat-label>Código</mat-label>
+        <input matInput [(ngModel)]="data.codigo" disabled>
+    </mat-form-field>
+    <div fxlayout="row" fxLayoutGap="10px">
+        <mat-form-field fxFlex appearance="fill">
+            <mat-label>Cadastrado</mat-label>
+            <input matInput [ngModel]="data.dataCadastrado | dateptbr" disabled>
+        </mat-form-field>
+        <mat-form-field fxFlex appearance="fill">
+            <mat-label>Alterado</mat-label>
+            <input matInput [ngModel]="data.dataAlterado | dateptbr" disabled>
+        </mat-form-field>
+    </div>   
+    <mat-form-field appearance="fill">
+        <mat-label>Referência</mat-label>
+        <input matInput [formControl]="referenciaForm" required>
+        <mat-error *ngIf="referenciaForm.invalid">{{getErrorMessageReferencia()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Descrição</mat-label>
+        <input matInput [formControl]="descricaoForm" required>
+        <mat-error *ngIf="descricaoForm.invalid">{{getErrorMessageDescricao()}}</mat-error>
+    </mat-form-field>
+    <div fxLayout="row" fxLayoutGap="5px">
+        <button mat-raised-button color="primary" (click)="onSalvar()" [disabled]="!descricaoForm.valid || !referenciaForm.valid">
+            <mat-icon>save</mat-icon>
+            Salvar
+        </button>
+        <button mat-raised-button (click)="onClose()">
+            <mat-icon>close</mat-icon>
+            Sair
+        </button>
+    </div>
+</div>

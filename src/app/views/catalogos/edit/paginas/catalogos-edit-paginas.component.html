@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-title-group>
+        <mat-card-title>{{registro?.pagina}}</mat-card-title>
+        <mat-card-subtitle>{{registro?.dataAlterado | datetimeptbr}}</mat-card-subtitle>
+        <img mat-card-xl-image  
+            src="{{config.urlCatalogos}}/{{catalogo?.codigo}}/paginas/{{registro?.codigo}}.jpeg">
+    </mat-card-title-group>
+    <mat-card-content>Mapeados: {{registro?.catalogoPaginaProdutos?.length}}</mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="onMapear()">
+            <mat-icon>photo_size_select_large</mat-icon> Mapear
+        </button>
+    </mat-card-actions>
+</mat-card>

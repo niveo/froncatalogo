@@ -1,0 +1,19 @@
+<div fxFlex fxLayout="column" class="full-height-h">
+    <mat-toolbar  >
+        <span>{{descricaoView}}</span>
+        <div style="flex: 1 1 auto;"></div>
+        <button mat-icon-button (click)="novoRegistro()">
+            <mat-icon>add</mat-icon>
+        </button>
+    </mat-toolbar>
+    <div fxFlex class="full-height-h">
+        <mat-progress-bar mode="indeterminate" *ngIf="progress"></mat-progress-bar>
+        <div class="full-height-a">
+            <div fxLayout="row wrap" fxLayoutGap="10px grid" style="padding: 5px;">
+                <div fxFlex="50" *ngFor="let item of registros">
+                    <catalogos-card-component [registro]="item" (onRemover)="onCarregarRegistros()"></catalogos-card-component>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

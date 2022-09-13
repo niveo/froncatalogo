@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Exclusão de registro(s)</h1>
+<div mat-dialog-content>
+    <p>Deseja remover o registro selecioado?</p>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onClose(0)">Não</button>
+    <button mat-button color="primary" (click)="onClose(1)" cdkFocusInitial>Sim</button>
+</div>

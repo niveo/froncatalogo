@@ -1,0 +1,11 @@
+<div fxLayout="column">
+    <button mat-button color="primary" (click)="fileupload.click()">
+        <mat-icon>file_upload</mat-icon> Selecionar Arquivo
+    </button>
+    <div style="font-size: 9px;" fxLayout="row">
+        <span fxFlex>{{name}}</span>
+        <span>{{size}}</span>
+    </div>
+</div>
+
+<input type="file" [accept]="requiredFileType" (change)="onFileSelected($event)" style="display: none;" #fileupload>

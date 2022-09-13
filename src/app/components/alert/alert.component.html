@@ -1,0 +1,10 @@
+<div [ngClass]="{'alert-error' : tipo === 'error', 
+    'alert-warning' : tipo === 'warning', 
+    'alert-info' : tipo === 'info',
+    'alert-success' : tipo === 'success'}">
+    <div class="alert">
+        <span class="alert-content ">
+            <ng-content></ng-content>
+        </span>
+    </div>
+</div>
