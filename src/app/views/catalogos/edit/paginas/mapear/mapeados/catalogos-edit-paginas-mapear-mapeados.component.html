@@ -1,9 +1,12 @@
 <div fxLayout="column" class="full-height-h">
     <div class="full-height-a">
-        <div *ngFor="let registro of registros" style="padding: 10px;">
+        <div *ngFor="let registro of registros;let i = index" style="padding: 10px;">
             <mat-card>
                 <mat-card-header>
-                    <mat-card-title>{{registro.produto?.referencia}}</mat-card-title>
+                    <mat-card-title>
+                        <span style="font-size: 12px;">({{i+1}})  </span>
+                        <span>{{registro.produto?.referencia}}</span>
+                    </mat-card-title>
                     <mat-card-subtitle>{{registro.produto?.descricao}}</mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content>

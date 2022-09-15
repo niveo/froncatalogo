@@ -5,4 +5,5 @@ export class Produto  extends ModelID{
     descricao?: string;
     dataCadastrado?: Date;
     dataAlterado?: Date;
+    valor?: number;
 }

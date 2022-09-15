@@ -11,7 +11,7 @@ import { AppMaterialModule } from './common/app-material.module';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfirmacaoDialogComponent } from './dialogs/confirmacaodialog.component';
-import { DateptBrPipe, DateTimeptBrPipe, SanitizeHtmlPipe } from './pipes';
+import { CurrencybrPipe, DateptBrPipe, DateTimeptBrPipe, SanitizeHtmlPipe } from './pipes';
 import {
   CatalogosCardComponent, CatalogosComponent,
   CatalogosEditComponent, CatalogosEditImportComponent,
@@ -40,6 +40,7 @@ import { environment } from '../environments/environment';
     DateptBrPipe,
     DateTimeptBrPipe,
     SanitizeHtmlPipe,
+    CurrencybrPipe,
     ConfirmacaoDialogComponent,
     CatalogosCardComponent,
     CatalogosEditComponent,

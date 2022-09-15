@@ -7,7 +7,9 @@ import { IConfigToken } from "src/app/common/app-config";
 export const environment : IConfigToken = {
   production: false,
   root_http: 'http://localhost:8080',
-  urlCatalogos:  'http://localhost:8080/catalogos'
+  urlCatalogos:  'http://localhost:8080/catalogos',
+  user: 'admin',
+  password: 'admin'
 };
 
 /*

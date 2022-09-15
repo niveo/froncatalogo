@@ -18,7 +18,10 @@ export class HttpRequestInterceptor implements HttpInterceptor {
     }
 
     const dupReq = req.clone({
-      url: url
+      url: url,
+      setHeaders: {
+        'Authorization': 'Basic ' + window.btoa(`${this.config.user}:${this.config.password}`)
+      }
     });
     return next.handle(dupReq);
   }

@@ -69,6 +69,7 @@ export class CatalogosEditPaginasMapearCordenadasComponent {
             this.produtoService.obterCodigo(codigoProduto).subscribe({
                 next: registro => {
                     this.produto = registro;
+                    this.referenciaProduto = this.produto.referencia;
                 }, error: () => {
                     this.notify.error(MSG4);
                     this.progress = false;
@@ -84,6 +85,7 @@ export class CatalogosEditPaginasMapearCordenadasComponent {
             this.produtoService.obterReferencia(this.referenciaProduto).subscribe({
                 next: registro => {
                     this.produto = registro;
+                    this.referenciaProduto = this.produto.referencia;
                 }, error: () => {
                     this.notify.error(MSG4);
                     this.onFocarInput();

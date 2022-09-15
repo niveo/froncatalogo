@@ -13,8 +13,9 @@ import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
 })
 export class ProdutosEditComponent {
 
-    descricaoForm = new FormControl('', [Validators.required]);
-    referenciaForm = new FormControl('', [Validators.required]);
+    descricaoForm = new FormControl('', [Validators.required, Validators.maxLength(100)]);
+    referenciaForm = new FormControl('', [Validators.required, Validators.maxLength(15)]);
+    valorForm = new FormControl(0.00, [Validators.required]);
 
     constructor(public dialogRef: MatDialogRef<any>,
         @Inject(MAT_DIALOG_DATA) public data: Produto,
@@ -23,6 +24,7 @@ export class ProdutosEditComponent {
         dialogRef.disableClose = true;
         this.descricaoForm.setValue(data.descricao!);
         this.referenciaForm.setValue(data.referencia!);
+        this.valorForm.setValue(data.valor!)
     }
 
     getErrorMessageDescricao() {
@@ -39,13 +41,23 @@ export class ProdutosEditComponent {
         return '';
     }
 
+    getErrorMessageValor() {
+        if (this.valorForm.hasError('required')) {
+            return 'Informe um valor';
+        }
+        return '';
+    }
+
 
     onClose() {
         this.dialogRef.close();
     }
 
     onSalvar() {
-        this.data.descricao = this.descricaoForm.value!!;
+        this.data.descricao = this.descricaoForm.value;
+        this.data.valor = this.valorForm.value;
+        this.data.referencia = this.referenciaForm.value;
+
         this.produtosServices.salvar(this.data).subscribe({
             next: () => {
                 this.notify.info(MSG1);

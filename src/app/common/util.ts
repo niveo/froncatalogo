@@ -15,14 +15,14 @@ export function getDateMoment(value: Date, formato: string = DATA_PT) {
 
 export function formatFileSize(bytes: string): any {
     var units = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
-      n = parseInt(bytes, 10) || 0,
-      l = 0;
+        n = parseInt(bytes, 10) || 0,
+        l = 0;
     while (n >= 1024) {
-      n = n / 1024;
-      l++;
+        n = n / 1024;
+        l++;
     }
     return (n.toFixed(n >= 10 || l < 1 ? 0 : 1) + ' ' + units[l]);
-  }
+}
 
 export function isEmptys(value: any, field?: string): boolean {
     if (field) {
@@ -39,3 +39,14 @@ export function isEmptys(value: any, field?: string): boolean {
         }
     }
 }
+
+export function converterValor(value: number,
+    digitos: number = 2,
+    currencyDisplay: string = 'code'): string {
+    return new Intl.NumberFormat('pt-BR', {
+        style: 'decimal', currency: 'BRL', maximumFractionDigits: digitos,
+        minimumFractionDigits: digitos, currencyDisplay: currencyDisplay 
+    }).format(value);
+}
+
+window['convertNumberFormat'] = converterValor
