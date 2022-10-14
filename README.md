@@ -9,10 +9,10 @@ Esse é um sistema composto em 3 partes
 * [Aplicativo](https://github.com/niveo/appcatalogo) Android
 
 <div align="center">
-    <img src="/sample/Screenshot from 2022-10-14 11-17-55.png" width="200px"</img> 
-    <img src="/sample/Screenshot from 2022-10-14 11-18-02.png" width="200px"</img> 
+    <img src="/sample/Screenshot from 2022-10-14 11-17-55.png" width="400px"</img> 
+    <img src="/sample/Screenshot from 2022-10-14 11-18-02.png" width="400px"</img> 
 </div>
 <div align="center">
-    <img src="/sample/Screenshot from 2022-10-14 11-18-09.png" width="200px"</img>
-    <img src="/sample/Screenshot from 2022-10-14 11-18-16.png" width="200px"</img>
+    <img src="/sample/Screenshot from 2022-10-14 11-18-09.png" width="400px"</img>
+    <img src="/sample/Screenshot from 2022-10-14 11-18-16.png" width="400px"</img>
 </div>
