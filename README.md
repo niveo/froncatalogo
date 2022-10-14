@@ -1,27 +1,18 @@
-# Froncatalogo
+# Sistema de Estudo Catalogo de Produtos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+Esse sistema tem o intuito de mapear os produtos em um catalogo com suas cordenadas X e Y levando esses dados para um aplicativo android onde o cliente pode clicar no catalogo e detalhar o produto ou mesmo lançar ele em um pedido.
 
-## Development server
+## Notas
+Esse é um sistema composto em 3 partes
+* [BackEnd](https://github.com/niveo/backcatalogo) Java Spring Boot
+* [FrontEnd](https://github.com/niveo/froncatalogo) Angular
+* [Aplicativo](https://github.com/niveo/appcatalogo) Android
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<div align="center">
+    <img src="/sample/Screenshot from 2022-10-14 11-17-55.png" width="200px"</img> 
+    <img src="/sample/Screenshot from 2022-10-14 11-18-02.png" width="200px"</img> 
+</div>
+<div align="center">
+    <img src="/sample/Screenshot from 2022-10-14 11-18-09.png" width="200px"</img>
+    <img src="/sample/Screenshot from 2022-10-14 11-18-16.png" width="200px"</img>
+</div>
